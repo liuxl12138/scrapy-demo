@@ -16,7 +16,7 @@ class JobPipeline(object):
 class ScrapyMYSQLPipeline(object):
     def open_spider(self, spider):
         self.connect = pymysql.Connect(
-            host="localhost",
+            host="192.168.43.1",
             port=3306,
             user="root",
             password="root",
