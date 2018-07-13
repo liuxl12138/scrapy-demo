@@ -4,9 +4,9 @@ from scrapy import Request
 
 from job.items import JobItem as Item
 import datetime
+from scrapy_redis.spiders import RedisCrawlSpider
 
-
-class JobspiderSpider(scrapy.Spider):
+class JobspiderSpider(RedisCrawlSpider):
     name = 'jobspider'
     allowed_domains = ['search.51job.com','jobs.51job.com']
     start_urls = [
